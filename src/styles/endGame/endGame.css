@@ -1,0 +1,42 @@
+.end-game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.end-game .end-game__title {
+  font-size: 36px;
+  color: red;
+  text-align: center;
+  margin: 100px 0 0px;
+}
+
+.end-game .end-game__img {
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+}
+
+@media screen and (max-width: 510px) {
+  .end-game .end-game__img {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+.end-game .end-game__img-success {
+  background: url("../../assets/img/success.jpg") no-repeat center;
+  margin: 155px 0;
+}
+
+.end-game .end-game__img-failure {
+  background: url("../../assets/img/failure.jpg") no-repeat center;
+  margin-bottom: 100px;
+}
+/*# sourceMappingURL=endGame.css.map */

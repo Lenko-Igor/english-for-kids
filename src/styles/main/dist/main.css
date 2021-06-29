@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* #app {
+  width: 1400px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 1450px) {
+  * #app {
+    width: 100%;
+    justify-content: center;
+  }
+}
+* #app .main {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+* #app .main .container {
+  width: 100%;
+}
+@media screen and (max-width: 1350px) {
+  * #app .main .container {
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  * #app .main .container {
+    width: 100%;
+  }
+}
+* #app .footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+* #app .footer .footer-git {
+  width: 125px;
+  height: 85px;
+  background: url("../../assets/icons/GitHub.svg");
+  background-size: cover;
+  text-decoration: none;
+}
+* #app .footer .footer-rsschool {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+* #app .footer .footer-rsschool .footer-rsschool__year {
+  color: #000000;
+  font-size: 30px;
+  margin-right: 15px;
+}
+* #app .footer .footer-rsschool .footer-rsschool__img {
+  min-width: 100px;
+  height: 37px;
+  background: url("../../assets/icons/rs_school.svg");
+  background-size: cover;
+  text-decoration: none;
+}

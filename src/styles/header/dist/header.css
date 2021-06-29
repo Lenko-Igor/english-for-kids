@@ -1,0 +1,174 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+.header .sideBar-modal {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+.header .sideBar-modal .sideBar-wrap {
+  width: 320px;
+  height: 100%;
+  padding: 70px 30px 15px;
+  background: linear-gradient(180deg, #0099AE 0%, #00BF82 100%);
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: -320px;
+  transition: left 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .sideBar-modal .sideBar-wrap .sideBar .sideBar-row {
+  list-style-type: none;
+  height: 54px;
+  width: 254px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  align-items: center;
+  text-decoration: none;
+}
+.header .sideBar-modal .sideBar-wrap .sideBar .sideBar-row .sideBar-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.header .sideBar-modal .sideBar-wrap .sideBar .sideBar-row .selected {
+  text-shadow: 4px 3px 0 #7A7A7A;
+  font-size: 26px;
+  text-decoration-line: underline;
+  cursor: none;
+}
+.header .sideBar-modal .sideBar-wrap .sideBar .sideBar-row :hover {
+  text-shadow: 4px 3px 0 #7A7A7A;
+  font-size: 26px;
+}
+.header .sideBar-modal .sideBar-wrap .sideBar-login {
+  width: 240px;
+  height: 60px;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .sideBar-modal .sideBar-wrap .sideBar-login .sideBar-login__title {
+  width: 200px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+  text-align: left;
+}
+.header .sideBar-modal .sideBar-wrap .sideBar-login:hover {
+  text-shadow: 4px 3px 0 #7A7A7A;
+}
+.header .sideBar-modal .open {
+  left: 0;
+}
+.header .visible {
+  width: 100%;
+}
+.header .header-menu {
+  width: 59px;
+  height: 59px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header-menu .menu-button {
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+.header .header-menu .menu-button .menu-icon {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 9px;
+  font-size: 29px;
+}
+.header .header-menu .menu-button .hidden {
+  visibility: hidden;
+}
+.header .switch-wrap {
+  width: 79px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .switch-wrap .switch-label {
+  width: 72px;
+  height: 32px;
+  display: block;
+  border-radius: 16px 16px;
+  position: relative;
+  cursor: pointer;
+}
+.header .switch-wrap .switch-label .switch-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.header .switch-wrap .switch-label .switch-checkbox:checked + .switch-lever {
+  right: 44px;
+}
+.header .switch-wrap .switch-label .switch-lever {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px 11px;
+  box-shadow: 1px 4px 5px -2px rgba(0, 0, 0, 0.56);
+  background-color: #ffffff;
+  position: absolute;
+  top: 5px;
+  z-index: 10;
+  transition: right 0.2s;
+}
+.header .switch-wrap .switch-label .switch-lever__train {
+  right: 5px;
+}
+.header .switch-wrap .switch-label .switch-lever__play {
+  left: 5px;
+}
+.header .switch-wrap .switch-label__train {
+  background: linear-gradient(40deg, #00bf82, #0099ae);
+}
+.header .switch-wrap .switch-label__train::before {
+  content: "train";
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+.header .switch-wrap .switch-label__play {
+  background: linear-gradient(40deg, #ffd86f, #fc6262);
+}
+.header .switch-wrap .switch-label__play::after {
+  content: "play";
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  top: 11px;
+  right: 11px;
+}

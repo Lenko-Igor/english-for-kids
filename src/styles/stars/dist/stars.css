@@ -1,0 +1,16 @@
+.feild-stars {
+  width: 600px;
+  height: 65px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow-x: hidden;
+}
+.feild-stars .star {
+  min-width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

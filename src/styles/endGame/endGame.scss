@@ -1,0 +1,29 @@
+.end-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .end-game__title {
+    font-size: 36px;
+    color: red;
+    text-align: center;
+    margin: 100px 0 0px;
+  }
+  .end-game__img {
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    @media screen and (max-width: 510px) {
+      width: 320px;
+      height: 320px;
+    }
+  }
+  .end-game__img-success {
+    background: url('../../assets/img/success.jpg') no-repeat center;
+    margin: 155px 0;
+  }
+  .end-game__img-failure {
+    background: url('../../assets/img/failure.jpg') no-repeat center;
+    margin-bottom: 100px;
+  }
+
+}

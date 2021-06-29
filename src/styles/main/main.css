@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* #app {
+  width: 1400px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1450px) {
+  * #app {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+* #app .main {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* #app .main .container {
+  width: 100%;
+}
+
+@media screen and (max-width: 1350px) {
+  * #app .main .container {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  * #app .main .container {
+    width: 100%;
+  }
+}
+
+* #app .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* #app .footer .footer-git {
+  width: 125px;
+  height: 85px;
+  background: url("../../assets/icons/GitHub.svg");
+  background-size: cover;
+  text-decoration: none;
+}
+
+* #app .footer .footer-rsschool {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* #app .footer .footer-rsschool .footer-rsschool__year {
+  color: #000000;
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+* #app .footer .footer-rsschool .footer-rsschool__img {
+  min-width: 100px;
+  height: 37px;
+  background: url("../../assets/icons/rs_school.svg");
+  background-size: cover;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
