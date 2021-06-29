@@ -3,15 +3,15 @@ import { element } from './element'
 import { CardData } from './types'
 
 class Card {
-  constructor() {}
+  constructor() { }
 
   createCard(card: CardData): HTMLElement {
     const cardWrap: HTMLElement = element.create('div', '', ['card-container'])
     const plug: HTMLElement = element.create('div', `${card.word}-plug`, ['card-plug'])
-    
+
     cardWrap.insertAdjacentElement('afterbegin', this.card(card))
     cardWrap.insertAdjacentElement('afterbegin', plug)
-    
+
     return cardWrap
   }
 
@@ -24,7 +24,7 @@ class Card {
     feild.insertAdjacentHTML('afterbegin', `
       <div class="card front">
         <div class="card-img" 
-          style="background: url('../src/assets/${card.image}') no-repeat center">
+          style="background: url('assets/${card.image}') no-repeat center">
         </div>
         <div class="card-footer visible">
           <h2 class="card-description">${card.word}</h2>
@@ -33,12 +33,12 @@ class Card {
       </div>
       <div class="card back">
         <div class="card-img" 
-          style="background: url('../src/assets/${card.image}') no-repeat center">
+          style="background: url('assets/${card.image}') no-repeat center">
         </div>
         <h2 class="card-description">${card.translation}</h2>
       </div>
     `)
-    
+
     const turn: HTMLElement = feild.querySelector('#turn') as HTMLElement
 
     turn.addEventListener('click', () => {
@@ -50,7 +50,7 @@ class Card {
       feild.removeEventListener('mouseleave', toggle)
       feild.classList.toggle('rotate')
     }
- 
+
     return feild
   }
 
