@@ -12,7 +12,7 @@ export default class CardsPage {
   public startButton: HTMLButtonElement
   private typeGame: string
 
-  constructor(cardsProps: CardData[], typeGame:string) {
+  constructor(cardsProps: CardData[], typeGame: string) {
     this.cardsProps = cardsProps
     this.typeGame = typeGame
     this.page = this.init(this.typeGame)
@@ -27,7 +27,7 @@ export default class CardsPage {
     wrap.insertAdjacentElement('afterbegin', buttonGame.init(typeGame))
     wrap.insertAdjacentElement('afterbegin', this.createCards(this.cardsProps))
     wrap.insertAdjacentElement('afterbegin', stars.feild)
-    
+
     return wrap
   }
 
@@ -72,9 +72,9 @@ export default class CardsPage {
 
   playAudioTrain(title: string) {
     const linkAudio: string = this.cardsProps
-      .filter(data => (data.word === title))[0].audioSrc as string 
-    
-    new Audio(`../src/assets/${linkAudio}`).play()
+      .filter(data => (data.word === title))[0].audioSrc as string
+
+    new Audio(`assets/${linkAudio}`).play()
   }
 
   showStar(status: string) {
@@ -84,5 +84,5 @@ export default class CardsPage {
   clearStars() {
     stars.clearStarsFeild()
   }
-  
+
 }

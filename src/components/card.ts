@@ -59,7 +59,7 @@ class Card {
     categoryFeild.insertAdjacentHTML('afterbegin', `
       <div class="category-header train">
         <div class="category-img" 
-          style="background: url('../src/assets/${img}') no-repeat center; background-size: cover">
+          style="background: url('assets/${img}') no-repeat center; background-size: cover">
         </div>
       </div>
       <div class="category-footer">
