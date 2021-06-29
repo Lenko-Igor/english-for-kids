@@ -12,10 +12,10 @@ class Stars {
     const starWrap: HTMLElement = element.create('div', '', ['star'])
     const star: HTMLImageElement = document.createElement('img')
     if (props === 'correct') {
-      star.src = '../src/assets/icons/star-win.svg'
+      star.src = 'assets/icons/star-win.svg'
       star.alt = 'starWin'
     } else {
-      star.src = '../src/assets/icons/star.svg'
+      star.src = 'assets/icons/star.svg'
       star.alt = 'star'
     }
     starWrap.insertAdjacentElement('afterbegin', star)
