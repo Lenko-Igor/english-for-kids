@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -13,6 +14,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext]',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -20,6 +22,11 @@ module.exports = {
       template: './index.html',
     }),
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public'},
+      ],
+    }),
   ],
   module: {
     rules: [
@@ -28,14 +35,28 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader,'css-loader']
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
-        use: ['file-loader']
-      },
-      {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.mp3$/i,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            outputPath: "sounds_import",
+          }
+        }
+      }  
     ]
   }
 }
